@@ -12,6 +12,6 @@ homepage = "https://github.com/Skarlett/dispatchtable"
 repository = "https://github.com/Skarlett/dispatchtable"
 readme = "README.md"
 keywords = ["dynamic", "runtime", "dispatch", "function", "map"]
-categories = ["rust-pattern", "data-structures"]
+categories = ["rust-patterns", "data-structures"]
 license = "MIT"
 
