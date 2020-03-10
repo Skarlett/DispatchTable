@@ -14,6 +14,6 @@ fn main() {
     table.insert("add", Box::new(add));
     table.insert("sub", Box::new(sub));
 
-    assert_eq!(table.call(&"add", &(1, 2)), 3);
-    assert_eq!(table.call(&"sub", &(5, 2)), 3);
+    assert_eq!(table.call(&"add", &(1, 2)), Some(3));
+    assert_eq!(table.call(&"sub", &(5, 2)), Some(3));
 }
