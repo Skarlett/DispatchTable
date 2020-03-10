@@ -14,5 +14,4 @@ readme = "README.md"
 keywords = ["dynamic", "runtime", "dispatch", "function", "map"]
 categories = ["rust-pattern", "data-structures"]
 license = "MIT"
-license-file = "LICENSE"
 
