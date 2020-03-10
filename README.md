@@ -2,7 +2,7 @@
 A rust library used for storing functions inside a key-based collection.
 
 
-```rs
+```rust
 use dispatchtable::{DispatchTable, Dispatch};
 
 fn add(params: &(isize, isize)) -> isize {
