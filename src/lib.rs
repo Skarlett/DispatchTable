@@ -10,8 +10,8 @@
 //! fn main() {
 //!   let dispatchtable = DispatchTable::new();
 //! 
-//!   dispatchtable.insert("add", add);
-//!   dispatchtable.insert("sub", sub);
+//!   dispatchtable.insert("add", Box::new(add));
+//!   dispatchtable.insert("sub", Box::new(sub));
 //! 
 //!   assert_eq!(dispatchtable.call("sub", &(10, 5)), Some(5));
 //! }
