@@ -1,6 +1,6 @@
 [package]
 name = "dispatchtable"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Skarlett <https://github.com/Skarlett>"]
 edition = "2018"
 

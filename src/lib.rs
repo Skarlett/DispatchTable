@@ -7,12 +7,14 @@
 //! fn add(p: &(u8, u8)) -> u8 { p.0 + p.1 }
 //! fn sub(p: &(u8, u8)) -> u8 { p.0 - p.1 }
 //! 
-//! let dispatchtable = DispatchTable::new();
+//! fn main() {
+//!   let dispatchtable = DispatchTable::new();
 //! 
-//! dispatchtable.insert("add", add)
-//! dispatchtable.insert("sub", sub)
+//!   dispatchtable.insert("add", add);
+//!   dispatchtable.insert("sub", sub);
 //! 
-//! assert_eq!(dispatchtable.call("sub", &(10, 5)), Some(5))
+//!   assert_eq!(dispatchtable.call("sub", &(10, 5)), Some(5));
+//! }
 //! ```
 
 
