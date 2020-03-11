@@ -1,3 +1,22 @@
+//! dispatchtable is a runtime key based collection that contains references to functions. 
+//!
+//! # Quick Start
+//! ```
+//! use dispatchtable::{Dispatch, DispatchTable};
+//! 
+//! fn add(p: &(u8, u8)) -> u8 { p.0 + p.1 }
+//! fn sub(p: &(u8, u8)) -> u8 { p.0 - p.1 }
+//! 
+//! let dispatchtable = DispatchTable::new();
+//! 
+//! dispatchtable.insert("add", add)
+//! dispatchtable.insert("sub", sub)
+//! 
+//! assert_eq!(dispatchtable.call("sub", &(10, 5)), Some(5))
+//! ```
+
+
+
 #[cfg(test)]
 mod test;
 mod core;
