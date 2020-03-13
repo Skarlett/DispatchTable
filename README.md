@@ -3,23 +3,18 @@ A rust library used for storing functions inside a key-based collection.
 
 
 ```rust
-use dispatchtable::{DispatchTable, Dispatch};
+use dispatchtable::{Dispatch, DispatchTable};
 
-fn add(params: &(isize, isize)) -> isize {
-    params.0 + params.1
-}
-
-fn sub(params: &(isize, isize)) -> isize {
-    params.0 + params.1
-}
-
+fn add(p: &(u8, u8)) -> u8 { p.0 + p.1 }
+fn sub(p: &(u8, u8)) -> u8 { p.0 - p.1 }
 
 fn main() {
-    let mut table = DispatchTable::new();
-    table.insert("add", Box::new(add));
-    table.insert("sub", Box::new(sub));
+  let mut dispatchtable = DispatchTable::new();
 
-    assert_eq!(table.call(&"add", &(1, 2)), Some(3));
-    assert_eq!(table.call(&"sub", &(5, 2)), Some(3));
+  dispatchtable.insert("add".to_string(), Box::new(add));
+  dispatchtable.insert("sub".to_string(), Box::new(sub));
+
+  assert_eq!(dispatchtable.call("sub", &(10, 5)), Some(5));
 }
+
 ```
